@@ -174,31 +174,90 @@ print(not not True)  # True
 print(not not False) # False
 #=======================================================================================================================
 #Day 3 Exercises:
+#Declare age as int, declare height as float, declare a variable with a complex number
 age = 22
 height = 5.3
 complex_num = 1 + 1j
+#Write a script that prompts the user to enter base and height of the triangle and calc an area
 base_of_triangle = input("Please enter the base of a triangle: ")
 height_of_triangle = input("Please enter the height of the triangle: ")
 area_of_triangle = float(base_of_triangle) * float(height_of_triangle)
 print("The area of the triangle is " ,(float(area_of_triangle)))
-
+#Write a script that prompts the user to enter side a,b, and c to get the perimeter
 side_a_of_triangle = input("Please enter the side A of a triangle: ")
 side_b_of_triangle = input("Please enter the side B of a triangle: ")
 side_c_of_triangle = input("Please enter the side C of a triangle: ")
 triangle_perimeter = (int(side_a_of_triangle)) + (int(side_b_of_triangle)) + (int(side_c_of_triangle))
 print("The perimeter of the triangle is ", (int(triangle_perimeter)))
-
+#Get length and width of a rectangle using prompt, calculate its area and perimeter
 length_of_rectangle = input("Please enter the length of a rectangle: ")
 width_of_rectangle = input("Please enter the width of a rectangle: ")
 rectangle_area = float(length_of_rectangle) * float(width_of_rectangle)
 print("The area of the rectangle is ", (float(rectangle_area)))
 rectangle_perimeter = (float(length_of_rectangle) + float(width_of_rectangle)) * 2
 print("The perimeter of the rectangle is ", (float(rectangle_perimeter)))
-
+#Get radius of a circle using prompt and calculate the area and circumference where pi = 3.14
 radius_of_circle = input("Please enter the radius of a circle: ")
 area_of_circle = 3.14 * float(radius_of_circle) ** 2
 print("The area of the circle is ", (float(area_of_circle)))
 perimeter_of_circle = 3.14 * float(radius_of_circle) ** 2
 print("The perimeter of the circle is ", (float(perimeter_of_circle)))
 
+#Calculate the slope, x-int, and y-int of y=2x-2
 
+#Slope is (m=y2-y1/x2-x1) Find the slope and Euclidean distance between point (2,2) and (6,10)
+
+#Compare the slopes from the two tasks above
+
+#Calc the value of y (y = x^2 + 6x + 9), try to use different x values and figure out what x value y would be 0
+
+#Find the length of 'python' and 'dragon' and make a false comparison statement
+print(len('python'))
+print(len('dragon'))
+print(len('python') != len('dragon'))
+
+#Use the in operator to check if jargon is in this sentence: "I hope this course is not full of jargon."
+print('I hope this course is not full of jargon.', 'jargon' in 'I hope this course is not full of jargon.')
+
+#There is no 'on' in both dragon and python
+print('dragon', 'on' is not 'dragon')
+print('python', 'on' is not 'python')
+
+#Find the length of the text python and convert the value to float and convert it to string
+print(len('python'))
+#Even numbers are divisible by 2 and the remainder is zero. How do you check if a  number is even or not using python?
+number_to_divide = input("Enter a number to divide: ")
+
+if int(number_to_divide) % 2 == 0:
+    print("That number is even!")
+else:
+    print("That number is odd!")
+
+#Check if the floor division of 7 by 3 is equal to the int converted value of 2.7
+
+#Check if type of '10' is equal to type of 10
+
+#Check if int('9.8') is equal to type of 10
+
+#Write a script that prompts the user to enter hours and rate per hour. Calculate their pay
+hours_worked = input("Please enter the hours worked: ")
+hours_worked = int(hours_worked)
+rate_per_hour = input("Please enter the hourly pay: ")
+rate_per_hour = int(rate_per_hour)
+
+total_pay = hours_worked * rate_per_hour
+print('This check should be around', total_pay, 'dollars.')
+
+# Write a script that prompts the user to enter number of years. Calculate the number of seconds a person can live.
+# Assume a person can live hundred years
+number_of_years = input("Please enter the number of years you've been alive: ")
+seconds_in_a_year = 31536000
+total_of_seconds = (int(number_of_years)) * (int(seconds_in_a_year))
+print("You have lived for", int(total_of_seconds), "seconds.")
+
+# Write a Python script that displays the following:
+'''1 1 1 1 1
+   2 1 2 4 8
+   3 1 3 9 27
+   4 1 4 16 64
+   5 1 5 25 125'''
