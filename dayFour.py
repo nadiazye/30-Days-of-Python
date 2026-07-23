@@ -32,7 +32,7 @@ print(len(first_name) > len(last_name))
 print(len(full_name))
 
 '''Escape Sequences in Strings
-In python and other programming languages \ followed by a character is an escape sequence. Most common are
+In python and other programming languages (one)\ followed by a character is an escape sequence. Most common are
 \n: new line
 \t: Tab
 \\: backslash
@@ -63,17 +63,17 @@ Examples below:'''
 first_name = 'Nadia'
 last_name = 'Rodriguez'
 language = 'Python'
-formatted_string = "I am %s %s. I teach $s" %(first_name, last_name, language)
+formatted_string = "I am %s %s. I teach %s" %(first_name, last_name, language)
 print(formatted_string)
 
 #Strings and numbers
 radius = 10
 pi = 3.14
 area = pi * radius**2
-formatted_string = "The area of circle with a radius %d is %.2f."(radius,area)
+formatted_string = "The area of circle with a radius %d is %.2f.",(radius,area)
 
 python_libraries = ['Django', 'Flask','NumPy','Matplotlib', 'Pandas']
-formatted_string = 'The following are python libraries:%s' %(python_libraries)
+formatted_string = 'The following are python libraries:%s' % python_libraries
 print(formatted_string)
 
 #New Style String Formatting
@@ -243,5 +243,211 @@ num = '123'
 print(num.isalpha())
 
 #isdecimal(): Checks if all characters in a string are decimal (0-9)
-challenge = 'thirty days of python'
 print(challenge.isdecimal())
+
+challenge_3 = '123'
+print(challenge_3.isdecimal())
+
+challenge_4 = '\u00B2'
+print(challenge_4.isdigit())
+
+challenge_5 = '12 3'
+print(challenge_5.isdecimal()) #space is still not allowed
+
+#isdigit(): Checks if all characters in a string are numbers (0-9 and some other unicode characters for numbers)
+challenge_6 = 'Thirty'
+print(challenge_6.isdigit())
+
+challenge_7 = '30'
+print(challenge_7.isdigit())
+
+print(challenge_4.isdigit())
+
+#isnumeric(): Checks if all characters in a string are numbers or number related (similar to isdigit(), more accepting)
+num = '10'
+print(num.isnumeric())
+
+num_1 = '\u00BD' # = 1/2
+print(num_1.isnumeric())
+
+num_2 = '10.5'
+print(num_2.isnumeric())
+
+#isidentifier(): Checks for valid identifier - it checks if a string is a valid variable name
+challenge_8= '30DaysOfPython'
+print(challenge_8.isidentifier()) # False, because it starts with a number
+
+challenge_9 = 'thirty_days_of_python'
+print(challenge.isidentifier())
+
+#islower(): Checks if all alphabet characters in the string are lowercase
+challenge = 'thirty days of python'
+print(challenge.islower()) # True
+challenge = 'Thirty days of python'
+print(challenge.islower()) # False
+
+#isupper(): Checks if all alphabet characters in the string are uppercase
+challenge = 'thirty days of python'
+print(challenge.isupper()) #  False
+challenge = 'THIRTY DAYS OF PYTHON'
+print(challenge.isupper()) # True
+
+#join(): Returns a concatenated string
+web_tech = ['HTML', 'CSS', 'JavaScript', 'React']
+result = ' '.join(web_tech)
+print(result)
+
+web_tech = ['HTML', 'CSS', 'JavaScript', 'React']
+result = '# '.join(web_tech)
+print(result)
+
+#strip(): Removes all given characters starting from the beginning and end of the string
+challenge = 'thirty days of pythoonnn'
+print(challenge.strip('noth')) # 'irty days of py'
+
+#replace(): Replaces substring with a given string
+challenge = 'thirty days of python'
+print(challenge.replace('python', 'coding')) # 'thirty days of coding'
+
+#split(): Splits the strong, using given string or space as a separator
+challenge = 'thirty days of python'
+print(challenge.split()) # ['thirty', 'days', 'of', 'python']
+challenge = 'thirty, days, of, python'
+print(challenge.split(', ')) # ['thirty', 'days', 'of', 'python']
+
+#title(): Returns a title cased string
+challenge = 'thirty days of python'
+print(challenge.title()) # Thirty Days Of Python
+
+#swapcase(): Converts all uppercase characters to lowercase and all lowercase characters to upper characters
+challenge = 'thirty days of python'
+print(challenge.swapcase())   # THIRTY DAYS OF PYTHON
+
+challenge = 'Thirty Days Of Python'
+print(challenge.swapcase())  # tHIRTY dAYS oF pYTHON
+#startswith(): checks if string starts with the specified string
+challenge = 'thirty days of python'
+print(challenge.startswith('thirty')) # True
+
+challenge = '30 days of python'
+print(challenge.startswith('thirty')) # False
+
+#Day 4 Exercises
+#Concatenate the string 'Thirty', 'Days', 'Of', 'Python' to a single string, 'Thirty Days Of Python'.
+number = 'Thirty'
+days = 'Days'
+article = 'Of'
+language = 'Python'
+space = ' '
+
+full_sentence = number + space + days + space + article + space + language
+print(full_sentence)
+
+#Concatenate the string 'Coding', 'For' , 'All' to a single string, 'Coding For All'.
+action = 'Coding'
+article = 'For'
+who = 'All'
+full_statement = action + space + article + who
+print(full_statement)
+
+#Declare a variable named company and assign it to an initial value "Coding For All".
+company = 'Coding For All'
+
+#Print the variable company using print().
+print(company)
+
+#Print the length of the company string using len() method and print().
+print(len(company))
+
+#Change all the characters to uppercase letters using upper() method.
+print(company.isupper())
+
+#Change all the characters to lowercase letters using lower() method.
+print(company.lower())
+
+#Use capitalize(), title(), swapcase() methods to format the value of the string Coding For All.
+print(company.capitalize())
+
+print(company.title())
+
+print(company.swapcase())
+
+#Cut(slice) out the first word of Coding For All string.
+first_gone = company[0:6]
+print(first_gone)
+
+#Check if Coding For All string contains a word Coding using the method index, find or other methods.
+print(company.find(first_gone))
+
+#Replace the word coding in the string 'Coding For All' to Python.
+print(company.replace('Coding','Python'))
+
+#Change "Python for Everyone" to "Python for All" using the replace method or other methods.
+
+#Split the string 'Coding For All' using space as the separator (split()) .
+
+#"Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" split the string at the comma.
+
+#What is the character at index 0 in the string Coding For All.
+
+#What is the last index of the string Coding For All.
+
+#What character is at index 10 in "Coding For All" string.
+
+#Create an acronym or an abbreviation for the name 'Python For Everyone'.
+
+#Create an acronym or an abbreviation for the name 'Coding For All'.
+
+#Use index to determine the position of the first occurrence of C in Coding For All.
+
+#Use index to determine the position of the first occurrence of F in Coding For All.
+
+#Use rfind to determine the position of the last occurrence of l in Coding For All People.
+
+#Use index or find to find the position of the first occurrence of the word 'because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+
+#Use rindex to find the position of the last occurrence of the word because in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+
+#Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+
+#Find the position of the first occurrence of the word 'because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+
+#Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+
+#Does 'Coding For All' start with a substring Coding?
+
+#Does 'Coding For All' end with a substring coding?
+
+#'   Coding For All      '  , remove the left and right trailing spaces in the given string.
+'''Which one of the following variables return True when we use the method isidentifier():
+30DaysOfPython
+thirty_days_of_python '''
+
+#The following list contains the names of some python libraries: ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']. Join the list with a hash with space string.
+
+'''Use the new line escape sequence to separate the following sentences.
+
+I am enjoying this challenge.
+I just wonder what is next. '''
+
+'''Use a tab escape sequence to write the following lines.
+
+Name      Age     Country   City
+Asabeneh  250     Finland   Helsinki'''
+
+'''Use the string formatting method to display the following:
+
+radius = 10
+area = 3.14 * radius ** 2
+The area of a circle with radius 10 is 314 meters square.
+
+'''
+
+'''Make the following using string formatting methods:
+8 + 6 = 14
+8 - 6 = 2
+8 * 6 = 48
+8 / 6 = 1.33
+8 % 6 = 2
+8 // 6 = 1
+8 ** 6 = 262144 '''
