@@ -214,13 +214,13 @@ print(result)
 challenge = 'thirty days of python'
 sub_string = 'da'
 print(challenge.index(sub_string))
-print(challenge.index(sub_string,9))
+#print(challenge.index(sub_string,9))
 
 #rindex(): returns the highest index of a substring, additional arguments indicate starting and ending index
 challenge = 'thirty days of python'
 sub_string = 'da'
 print(challenge.rindex(sub_string))
-print(challenge.rindex(sub_string,9))
+#print(challenge.rindex(sub_string,9))
 print(challenge.rindex('on',8))
 
 #isalnum(): checks alphanumeric character
@@ -347,7 +347,7 @@ print(full_sentence)
 action = 'Coding'
 article = 'For'
 who = 'All'
-full_statement = action + space + article + who
+full_statement = action + space + article + space + who
 print(full_statement)
 
 #Declare a variable named company and assign it to an initial value "Coding For All".
@@ -360,7 +360,7 @@ print(company)
 print(len(company))
 
 #Change all the characters to uppercase letters using upper() method.
-print(company.isupper())
+print(company.upper())
 
 #Change all the characters to lowercase letters using lower() method.
 print(company.lower())
@@ -373,11 +373,11 @@ print(company.title())
 print(company.swapcase())
 
 #Cut(slice) out the first word of Coding For All string.
-first_gone = company[0:6]
+first_gone = company[0:6] #need to rewrite
 print(first_gone)
 
 #Check if Coding For All string contains a word Coding using the method index, find or other methods.
-print(company.find(first_gone))
+print(company.find('Coding')) #need to rewrite
 
 #Replace the word coding in the string 'Coding For All' to Python.
 print(company.replace('Coding','Python'))
@@ -397,13 +397,20 @@ print(tech_companies.split(','))
 
 #What is the character at index 0 in the string Coding For All.
 print(company[0])
+
 #What is the last index of the string Coding For All.
 print(company[-1])
+
 #What character is at index 10 in "Coding For All" string.
-print(companny[10])
+print(company[10])
+
 #Create an acronym or an abbreviation for the name 'Python For Everyone'.
+acronym = language_for[0:7:11]
+print(acronym)
 
 #Create an acronym or an abbreviation for the name 'Coding For All'.
+acronym_second = company[0:7:11]
+print(acronym_second)
 
 #Use index to determine the position of the first occurrence of C in Coding For All.
 
