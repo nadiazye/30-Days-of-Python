@@ -83,4 +83,37 @@ print(second_item)
 print(third_item)
 print(rest)
 
+#Example One
+fruits_ver2 = ['banana', 'orange', ' mango', ' lemon', 'lime', 'apple']
+ver2_first, ver2_second, ver2_third, *rest = fruits_ver2
+
+print(ver2_first) #output should be banana
+print(ver2_second) #output should be orange
+print(ver2_third) #output should be mango
+print(rest) #lemon, lime, apple
+
+#Example Two
+first, second, third, *rest, tenth = [1,2,3,4,5,6,7,8,9,10]
+print(first)
+print(second)
+print(third)
+print(rest)
+print(tenth)
+
+#Example Three
+countries_ver2 = ['Germany', 'France', 'Belgium', 'Sweden', 'Denmark', 'Finland', 'Norway', 'Iceland', 'Estonia']
+gr, fr, bg, sw, *scandic, es = countries_ver2
+print(gr)
+print(fr)
+print(bg)
+print(sw)
+print(scandic)
+print(es)
+
+#Slicing Items from a List
+    #Positive indexing = we ca specify a range of positive indexes by specifying the start, end and step, the return value will be a new list
+        #(default values for start = 0, end = len(lst) - 1 (last item), step = 1)
+fruits_ver3 = ['banana', 'orange', ' mango', ' lemon']
+all_fruits = fruits_ver3[0:4]
+
 
