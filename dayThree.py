@@ -1,4 +1,4 @@
-#Day Three out of 30 Days of Python Challenge
+#Day 3 out of 30 Days of Python Challenge
 
 '''Assignment Operators: are used to assign value to variables, Examples below:
 =, x = 5, x=5
