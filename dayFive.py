@@ -14,7 +14,7 @@ or it may have different data type items.
 How to Create a List:
 In Python we can create lists in two ways:
 '''
-from traceback import print_stack
+#from traceback import print_stack
 
 #Using list built-in function
 lst = list() #syntax
@@ -166,10 +166,10 @@ does_exist = 'lime' in fruits
 print(does_exist)
 
 #Adding Items to a List
-    #to add item to the end of an existing list we use the method append()
+#to add item to the end of an existing list we use the method append()
  #the syntax
- '''    lst = list()
-        lst.append(item)   '''
+ '''lst = list()
+    lst.append(item)'''
 #using fruits variable/list from above
 fruits.append('apple')
 print(fruits)
@@ -218,3 +218,154 @@ fruits.pop(0) #should get rid of the first index
 print(fruits)
 
 #Removing Items Using Del
+#The del keyword removes the specified index and it can also be used to delete items
+# within index range. It can also delete the list completely
+'''syntax
+lst = [item1,item2]
+del lst[index] #to delete one item 
+del lst #to delete list completely'''
+
+del fruits[0]
+print(fruits)
+
+del fruits[1]
+print(fruits)
+
+del fruits[1:3] #this deletes items between the given indexes, does not delete the item with index 3
+print(fruits)
+
+del fruits
+print(fruits) #This should give an error as the list no longer exists
+
+#Clearing List Items
+#The clear() method empties the list:
+'''syntax
+lst = [item1,item2]
+lst.clear()'''
+
+fruits = ['banana', 'orange', 'mango', 'lemon', 'apple']
+fruits.clear()
+print(fruits) #output [ ]
+
+#Copying a List
+'''It is possible to copy a list by reassigning it to a new variable in the following way: list2 = list1
+Now, list2 is a reference of list1, any changes we make in list2 will also modify the original, list1
+But there are lots of cases in which we do not like to modify the original instead we like to have a different
+copy. Thus, the copy() function'''
+
+fruits = ['banana', 'orange', 'mango', 'lemon', 'apple']
+fruits_copy = fruits.copy()
+print(fruits_copy)
+
+#Joining Lists
+#There are several ways to join or concatenate, two or more lists in Python
+#Using the plus operator (+)
+  #syntax lst3 = lst2 + lst1
+
+positive_num = [1, 2, 3, 4, 5]
+zero = [0]
+negative_num = [-5, -4, -3, -2, -1]
+
+integers = negative_num + zero + positive_num
+print(integers)
+
+fruits_list = ['banana', 'orange', 'mango', 'lemon', 'apple']
+vegetables_list = ['Tomato', 'Potato', 'Cabbage', 'Onion', 'Carrot']
+fruits_and_veggies = fruits_list + vegetables_list
+print(fruits_and_veggies)
+
+#Joining using extend() method
+#The extend() method allows to append list in a list
+
+'''syntax
+list1 = [item1, item2]
+list2 = [item 3, item 4, item 5]
+list1.extend(list2)'''
+
+num1 = [0, 1, 2, 3]
+num2 = [4, 5, 6]
+num1.extend(num2)
+print('Numbers: ', num1)
+negative_num = [-5, -4, -3, -2, -1]
+positive_num = [1, 2, 3, 4, 5]
+zero = [0]
+
+negative_num.extend(zero)
+negative_numbers.extend(positive_num)
+print('Integers: ', negative_num)
+
+fruits_list.extend(vegetables_list)
+print('Fruits and veggies: ', fruits_list)
+
+#Counting Items in a List
+#The count() methods returns the number of times and item appears in a list:
+'''syntax
+lst = ['item1', 'item2']
+lst.count(item)'''
+
+fruits_count = ['banana', 'orange', 'mango', 'lemon']
+print(fruits_count.count('orange'))
+
+ages = [22, 19, 24, 25, 26, 24, 25, 24]
+print(ages.count(24))
+
+#Finding Index of an Item
+#the index() method returns the index of an item in the list:
+'''
+lst = ['item1', 'item2']
+lst.index(item)'''
+
+fruits_index = ['banana', 'orange', 'mango', 'lemon']
+print(fruits_index.index('orange'))
+
+ages_index = [22, 19, 24, 25, 26, 24, 25, 24]
+print(ages_index.index(24))
+
+#Reversing a List
+#the reverse() method reverses the order of a list
+'''syntax
+lst = ['item1', 'item2']
+lst.reverse()'''
+
+fruits_reverse = ['banana', 'orange', 'mango', 'lemon', 'apple']
+fruit_reverse.reverse()
+print(fruits_reverse)
+
+ages_reverse = [22, 19, 24, 25, 26, 24, 25, 24]
+ages_reverse.reverse()
+print(ages_reverse)
+
+#Sorting List Items
+'''To sort lists we can use sort() method or sorted() built-in functions. The sort() method reorders the list
+items in ascending order and modifies the original list
+If an argument of sort() method reverse is equal to true, it will arrange the list in descending order'''
+
+#sort(): this method modifies the original list
+''' syntax
+lst = ['item1', 'item2']
+lst.sort() #ascending
+lst.sort(reverse=True) #descending'''
+
+fruits = ['banana', 'orange', 'mango', 'lemon', 'apple']
+fruits.sort()
+print(fruits)      #sorted in alphabetical order
+fruits.sort(reverse=True)
+print(fruits)
+
+ages = [22, 19, 24, 25, 26, 24, 25, 24]
+ages.sort()
+print(ages)
+
+ages.sort(reverse=True)
+print(ages)
+
+#sorted(): returns the ordered list without modifying the original list
+fruits = ['banana', 'orange', 'mango', 'lemon', 'apple']
+print(sorted(fruits))
+
+#now in reverse
+fruits = ['banana', 'orange', 'mango', 'lemon', 'apple']
+fruits = sorted(fruits, reverse=True)
+print(fruits)
+
+
