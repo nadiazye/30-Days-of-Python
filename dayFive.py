@@ -14,6 +14,7 @@ or it may have different data type items.
 How to Create a List:
 In Python we can create lists in two ways:
 '''
+from traceback import print_stack
 
 #Using list built-in function
 lst = list() #syntax
@@ -111,9 +112,109 @@ print(scandic)
 print(es)
 
 #Slicing Items from a List
-    #Positive indexing = we ca specify a range of positive indexes by specifying the start, end and step, the return value will be a new list
+    #Positive indexing = we can specify a range of positive indexes by specifying the start, end and step, the return value will be a new list
         #(default values for start = 0, end = len(lst) - 1 (last item), step = 1)
 fruits_ver3 = ['banana', 'orange', ' mango', ' lemon']
 all_fruits = fruits_ver3[0:4]
 
+all_fruits = fruits_ver3[0:] #if we don't put where to stop then it continues and shows the rest
+orange_and_mango = fruits_ver3[1:3]
+orange_mango_lemon = fruits_ver3[1:]
+orange_and_lemon = fruits_ver3[::2] #here used is a 3rd argument, it will take every second item
 
+#prints of above
+print(all_fruits)
+print(orange_and_mango)
+print(orange_mango_lemon)
+print(orange_and_lemon)
+
+#Negative Indexing - we can specify a range of negative indexes by specifying the start,
+#end and step, the return value be a new list
+        #using fruits_ver3 again
+all_fruits_ver2 = fruits_ver3[-4:] #returns all the indexes
+orange_and_mango_2 = fruits_ver3[-4:] #does not include the last index
+orange_mango_lemon_2 = fruits_ver3[-3:] #this prints the result starting from -3 to the end
+reverse_fruits = fruits[::-1]  #a negative step will take the list in reverse order
+
+#printing the above
+print(all_fruits_ver2)
+print(orange_and_mango_2)
+print(orange_mango_lemon_2)
+print(reverse_fruits)
+
+#Modifying Lists
+    #list is a mutable or modifiable ordered collection of items
+#using the fruits variable/list from above
+fruits[0] = 'avocado'
+print(fruits)
+
+fruits[1] = 'apple'
+print(fruits)
+
+last_index_2 = len(fruits) - 1
+
+fruits[last_index_2] = 'lime'
+print(fruits)
+
+#Checking Items in a List
+    #checking an item if it is a member of a list using in operator
+#using fruits variable/list from above
+does_exist = 'banana' in fruits
+print(does_exist)
+
+does_exist = 'lime' in fruits
+print(does_exist)
+
+#Adding Items to a List
+    #to add item to the end of an existing list we use the method append()
+ #the syntax
+ '''    lst = list()
+        lst.append(item)   '''
+#using fruits variable/list from above
+fruits.append('apple')
+print(fruits)
+
+fruits.append('lime')
+print(fruits)
+
+#Inserting Items into a List
+#We can use insert() method to insert a single item at a specified index in a list.
+#This will shift the other items to the right. The insert() methods takes two arguments: index and an item to start
+   #syntax
+'''   lst = ['item1','item2']
+      lst.insert(index,item)'''
+
+#once more using the fruits variable
+fruits.insert(2, 'apple')
+print(fruits)
+
+fruits.insert(3, 'lime')
+print(fruits)
+
+#Removing Item from a List
+#the remove method removes a specified item from a list
+''' syntax:
+lst = [item1,item2]
+lst.remove(item)'''
+
+#using fruits variable once more
+fruits.remove('banana')
+print(fruits)
+
+fruits.remove('lemon')
+
+#Removing Items Using Pop
+'''syntax
+lst = [item1,item2]
+lst.pop() the last item
+lst.pop(index)
+'''
+
+#using fruits variable
+fruits.op() #should get rid of the last index
+print(fruits)
+
+fruits.pop(0) #should get rid of the first index
+print(fruits)
+
+#Removing Items Using Del
