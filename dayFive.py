@@ -168,8 +168,8 @@ print(does_exist)
 #Adding Items to a List
 #to add item to the end of an existing list we use the method append()
  #the syntax
- '''lst = list()
-    lst.append(item)'''
+#lst = list()
+# lst.append(item)
 #using fruits variable/list from above
 fruits.append('apple')
 print(fruits)
@@ -198,6 +198,7 @@ lst = [item1,item2]
 lst.remove(item)'''
 
 #using fruits variable once more
+fruits = ['banana', 'orange', 'mango', 'lemon']
 fruits.remove('banana')
 print(fruits)
 
@@ -211,7 +212,8 @@ lst.pop(index)
 '''
 
 #using fruits variable
-fruits.op() #should get rid of the last index
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits.pop() #should get rid of the last index
 print(fruits)
 
 fruits.pop(0) #should get rid of the first index
