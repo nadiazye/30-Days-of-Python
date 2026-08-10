@@ -230,14 +230,14 @@ del lst #to delete list completely'''
 del fruits[0]
 print(fruits)
 
-del fruits[1]
+#del fruits[1]
 print(fruits)
 
 del fruits[1:3] #this deletes items between the given indexes, does not delete the item with index 3
 print(fruits)
 
-del fruits
-print(fruits) #This should give an error as the list no longer exists
+'''del fruits
+print(fruits) #This should give an error as the list no longer exists (to which it did) '''
 
 #Clearing List Items
 #The clear() method empties the list:
@@ -293,7 +293,7 @@ positive_num = [1, 2, 3, 4, 5]
 zero = [0]
 
 negative_num.extend(zero)
-negative_numbers.extend(positive_num)
+negative_num.extend(positive_num)
 print('Integers: ', negative_num)
 
 fruits_list.extend(vegetables_list)
@@ -330,7 +330,7 @@ lst = ['item1', 'item2']
 lst.reverse()'''
 
 fruits_reverse = ['banana', 'orange', 'mango', 'lemon', 'apple']
-fruit_reverse.reverse()
+fruits_reverse.reverse()
 print(fruits_reverse)
 
 ages_reverse = [22, 19, 24, 25, 26, 24, 25, 24]
@@ -370,47 +370,104 @@ fruits = ['banana', 'orange', 'mango', 'lemon', 'apple']
 fruits = sorted(fruits, reverse=True)
 print(fruits)
 #=======================================================================================================================
+print('=================================================================================================================')
 #Day 5 Exercises
 
 #1. Declare an empty list
+empty_list = []
 
 #2. Declare a list with more than 5 items
+multiple_item_list =['item1', 'item2', 'item3', 'item4', 'item5']
 
 #3. Find the length of your list
+print(len(multiple_item_list))
 
 #4. Get the first item, the middle item and the last item of the list
+multiple_item_list = ['item1', 'item2', 'item3', 'item4', 'item5']
+first_item = multiple_item_list[0]
+middle_item = multiple_item_list[2]
+last_item = multiple_item_list[-1]
+
+print(first_item)
+print(middle_item)
+print(last_item)
 
 #5. Declare a list called mixed_data_types, put your(name, age, height, marital status, address)
+mixed_data_types = ['Nadia', 22, 5.3, 'Single', 'Miami']
+print(mixed_data_types)
 
 #6. Declare a list variable named it_companies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon.
+it_companies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'Oracle', 'Amazon']
 
 #7. Print the list using print()
+print(it_companies)
 
 #8. Print the number of companies in the list
+print(len(it_companies))
 
 #9. Print the first, middle and last company
+print(it_companies[::2])
 
 #10. Print the list after modifying one of the companies
+it_companies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'Oracle', 'Amazon']
+
+it_companies[0] = 'Nokia'
+print(it_companies)
 
 #11. Add an IT company to it_companies
+it_companies = ['Nokia', 'Facebook', 'Google', 'Microsoft', 'Apple', 'Oracle', 'Amazon']
+
+it_companies.append('Twitter')
+print(it_companies)
 
 #12. Insert an IT company in the middle of the companies list
+it_companies = ['Nokia', 'Facebook','Google', 'Microsoft', 'Apple', 'Oracle', 'Amazon', 'Twitter']
+
+it_companies[4] = 'Nvidia'
+print(it_companies)
 
 #13. Change one of the it_companies names to uppercase (IBM excluded!)
+it_companies = ['Nokia', 'Facebook', 'Google', 'Microsoft', 'Nvidia', 'Oracle', 'Amazon', 'Twitter']
 
 #14. Join the it_companies with a string '#;  '
+it_companies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'Oracle', 'Amazon']
+
+join_var = ['#; ']
+joined_companies = it_companies + join_var
+
+print(joined_companies)
 
 #15. Check if a certain company exists in the it_companies list.
+does_IT_exist = 'Facebook' in it_companies
+print(does_IT_exist)
 
 #16. Sort the list using sort() method
+it_companies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'Oracle', 'Amazon']
+
+it_companies.sort()
+print(it_companies)
 
 #17. Reverse the list in descending order using reverse() method
+it_companies.sort(reverse=True)
+print(it_companies)
 
 #18. Slice out the first 3 companies from the list
+it_companies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'Oracle', 'Amazon']
+
+first_three = it_companies[0:3]
+print(first_three)
 
 #19. Slice out the last 3 companies from the list
+it_companies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'Oracle', 'Amazon']
+
+last_three = it_companies[-3:]
+print(last_three)
 
 #20. Slice out the middle IT company or companies from the list
+it_companies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'Oracle', 'Amazon']
+
+exclude_middle = it_companies[0:2:3]
+print(exclude_middle)
 
 #21. Remove the first IT company from the list
 
@@ -421,19 +478,42 @@ print(fruits)
 #24. Remove all IT companies from the list
 
 #5. Destroy the IT companies list
+it_companies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'Oracle', 'Amazon']
+
+it_companies.clear()
+print(it_companies)
 
 #26. Join the following lists:
-
 ''' front_end = ['HTML', 'CSS', 'JS', 'React', 'Redux']
 back_end = ['Node','Express', 'MongoDB'] '''
 
+front_end = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+back_end = ['Node','Express', 'MongoDB']
+
+full_dev = front_end + back_end
+print(full_dev)
+
 #27. After joining the lists in question 26. Copy the joined list and assign it to a variable full_stack,
         # then insert Python and SQL after Redux.
+full_dev_copy = full_dev.copy()
 
+print(full_dev_copy)
+full_dev_copy.insert(5,'Python')
+full_dev_copy.insert(6, 'SQL')
+
+print(full_dev_copy)
 #28. The following is a list of 10 students ages:
          #ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+print(ages)
 
 #29. Sort the list and find the min and max age
+ages.sort()
+print(ages)
+
+min_age = ages[0]
+max_age = ages[-1]
+print(min_age, max_age)
 
 #30. Add the min age and the max age again to the list
 
@@ -442,15 +522,51 @@ back_end = ['Node','Express', 'MongoDB'] '''
 #32. Find the average age (sum of all items divided by their number )
 
 #33. Find the range of the ages (max minus min)
+range_of_age = max_age - min_age
+print(range_of_age)
 
 #34. Compare the value of (min - average) and (max - average), use abs() method
 
 #35. Find the middle country(ies) in the countries list
+countries = ['Afghanistan','Albania','Algeria','Andorra','Angola','Antigua and Barbuda','Argentina','Armenia',
+    'Australia','Austria','Azerbaijan','Bahamas','Bahrain','Bangladesh','Barbados','Belarus','Belgium','Belize','Benin',
+    'Bhutan','Bolivia','Bosnia and Herzegovina','Botswana','Brazil','Brunei','Bulgaria','Burkina Faso','Burundi',
+    'Cabo Verde','Cambodia','Cameroon','Canada','Central African Republic', 'Chad','Chile','China','Colombia','Comoros',
+    'Congo, Democratic Republic of the','Congo, Republic of the','Costa Rica',"Côte d'Ivoire",'Croatia','Cuba','Cyprus',
+    'Czech Republic','Denmark','Djibouti','Dominica','Dominican Republic','East Timor (Timor-Leste)','Ecuador','Egypt',
+    'El Salvador','Equatorial Guinea','Eritrea','Estonia','Eswatini','Ethiopia','Fiji','Finland','France','Gabon',
+    'Gambia','Georgia','Germany','Ghana','Greece','Grenada','Guatemala','Guinea','Guinea-Bissau','Guyana','Haiti',
+    'Honduras','Hungary','Iceland','India','Indonesia','Iran','Iraq','Ireland','Italy','Jamaica','Japan','Jordan',
+    'Kazakhstan','Kenya','Kiribati','Korea, North','Korea, South','Kuwait','Kyrgyzstan','Laos','Latvia','Lebanon',
+    'Lesotho','Liberia','Libya','Liechtenstein', 'Lithuania','Luxembourg','Madagascar','Malawi','Malaysia','Maldives',
+    'Mali','Malta','Marshall Islands','Mauritania','Mauritius','Mexico','Micronesia','Moldova','Monaco','Mongolia',
+    'Montenegro','Morocco','Mozambique','Myanmar','Namibia','Nauru','Nepal','Netherlands','New Zealand','Nicaragua',
+    'Niger','Nigeria','North Macedonia','Norway','Oman','Pakistan','Palau','Palestine', 'Panama','Papua New Guinea',
+    'Paraguay','Peru','Philippines','Poland','Portugal','Puerto Rico', 'Qatar','Romania','Russia','Rwanda',
+    'Saint Kitts and Nevis','Saint Lucia','Saint Vincent and the Grenadines','Samoa','San Marino','Sao Tome and Principe',
+    'Saudi Arabia','Senegal','Serbia','Seychelles','Sierra Leone','Singapore','Slovakia','Slovenia','Solomon Islands',
+    'Somalia','South Africa','South Sudan','Spain','Sri Lanka','Sudan','Suriname','Sweden','Switzerland','Syria',
+    'Tajikistan','Tanzania','Thailand','Togo','Tonga','Trinidad and Tobago','Tunisia','Turkey','Turkmenistan','Tuvalu',
+    'Uganda','Ukraine','United Arab Emirates','United Kingdom','United States','Uruguay','Uzbekistan','Vanuatu',
+    'Vatican City','Venezuela','Vietnam','Yemen','Zambia','Zimbabwe']
 
 #36. Divide the countries list into two equal lists if it is even if not one more country for the first half.
-     #['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']
+middle_of_countries = len(countries) // 2
+
+first_half_countries = countries[:middle_of_countries]
+second_half_countries = countries[middle_of_countries:]
+
+print(first_half_countries)
+print(second_half_countries)
 
 #37. Unpack the first three countries and the rest as scandic countries.
+#['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']
 
+big_names = ['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']
+first_big, second_big, third_big, *scandic = big_names
+print(first_big)
+print(second_big)
+print(third_big)
+print(scandic)
 
 
