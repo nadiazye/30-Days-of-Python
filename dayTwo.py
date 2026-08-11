@@ -1,4 +1,5 @@
 #Day 2 out of 30 Days of Python Challenge
+#=======================================================================================================================
 from operator import truediv
 
 #going over pythons built-in functions
@@ -119,7 +120,7 @@ is_light_on = True
 name, family_name, birth_year, is_single = 'Nadia', 'Rodriguez', 2003, False
 
 print(name, family_name, birth_year, is_single)
-
+#-----------------------------------------------------------------------------------------------------------------------
 #Exercises Level Two
 print(type(name), type(family_name), type(birth_year), type(is_single))
 print(len(name))

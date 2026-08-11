@@ -1,5 +1,5 @@
 #Day 4 out of the 30 Days of Python Challenge
-
+#=======================================================================================================================
 '''
 Strings
 Text is a string data type. Any data type written as text is a string. Any data under single, double, or triple
@@ -333,8 +333,9 @@ print(challenge.startswith('thirty')) # True
 
 challenge = '30 days of python'
 print(challenge.startswith('thirty')) # False
-#=======================================================================================================================
 
+#=======================================================================================================================
+print('================================================================================================================')
 #Day 4 Exercises
 #Concatenate the string 'Thirty', 'Days', 'Of', 'Python' to a single string, 'Thirty Days Of Python'.
 number = 'Thirty'

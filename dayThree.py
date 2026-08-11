@@ -1,5 +1,5 @@
 #Day 3 out of 30 Days of Python Challenge
-
+#=======================================================================================================================
 '''Assignment Operators: are used to assign value to variables, Examples below:
 =, x = 5, x=5
 +=, x + 3, x=x+3
@@ -172,23 +172,28 @@ print(not True)      # False - Negation, the not operator turns true to false
 print(not False)     # True
 print(not not True)  # True
 print(not not False) # False
+
 #=======================================================================================================================
 #Day 3 Exercises:
+
 #Declare age as int, declare height as float, declare a variable with a complex number
 age = 22
 height = 5.3
 complex_num = 1 + 1j
+
 #Write a script that prompts the user to enter base and height of the triangle and calc an area
 base_of_triangle = input("Please enter the base of a triangle: ")
 height_of_triangle = input("Please enter the height of the triangle: ")
 area_of_triangle = float(base_of_triangle) * float(height_of_triangle)
 print("The area of the triangle is " ,(float(area_of_triangle)))
+
 #Write a script that prompts the user to enter side a,b, and c to get the perimeter
 side_a_of_triangle = input("Please enter the side A of a triangle: ")
 side_b_of_triangle = input("Please enter the side B of a triangle: ")
 side_c_of_triangle = input("Please enter the side C of a triangle: ")
 triangle_perimeter = (int(side_a_of_triangle)) + (int(side_b_of_triangle)) + (int(side_c_of_triangle))
 print("The perimeter of the triangle is ", (int(triangle_perimeter)))
+
 #Get length and width of a rectangle using prompt, calculate its area and perimeter
 length_of_rectangle = input("Please enter the length of a rectangle: ")
 width_of_rectangle = input("Please enter the width of a rectangle: ")
@@ -196,6 +201,7 @@ rectangle_area = float(length_of_rectangle) * float(width_of_rectangle)
 print("The area of the rectangle is ", (float(rectangle_area)))
 rectangle_perimeter = (float(length_of_rectangle) + float(width_of_rectangle)) * 2
 print("The perimeter of the rectangle is ", (float(rectangle_perimeter)))
+
 #Get radius of a circle using prompt and calculate the area and circumference where pi = 3.14
 radius_of_circle = input("Please enter the radius of a circle: ")
 area_of_circle = 3.14 * float(radius_of_circle) ** 2
