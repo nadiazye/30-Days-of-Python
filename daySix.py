@@ -119,33 +119,69 @@ del fruits
 #Exercises: Level 1
 #-----------------------------------------------------------------------------------------------------------------------
 #1. Create an empty tuple
+empty_tuple = ()
 
 #2. Create a tuple containing names of your sisters and your brothers (imaginary siblings are fine)
+brother_names = ('Sean', 'Enzo')
+sister_names = ('Jazlyn', 'Nadia')
+
+print(brother_names)
+print(sister_names)
 
 #3. Join brothers and sisters tuples and assign it to siblings
+siblings = brother_names + sister_names
+
+print(siblings)
 
 #4. How many siblings do you have?
+print(len(siblings))
 
 #5. Modify the siblings tuple and add the name of your father and mother and assign it to family_members
+siblings = list(siblings)
 
+siblings.append('Zulie')
+siblings.append('Jose')
+
+family_members = siblings
+print(family_members)
 
 #Exercises: Level 2
 #-----------------------------------------------------------------------------------------------------------------------
 #6. Unpack siblings and parents from family_members
 
 #7. Create fruits, vegetables and animal products tuples. Join the three tuples and assign it to a variable called food_stuff_tp.
+fruits = ('banana', 'orange', 'mango', 'lemon')
+vegetables = ('Tomato', 'Potato', 'Cabbage', 'Onion')
+animals = ('Pig', 'Cow', 'Chicken')
+
+food_stuff_tp = fruits + vegetables + animals
+print(food_stuff_tp)
 
 #8. Change the about food_stuff_tp tuple to a food_stuff_lt list
+food_stuff_lt = list(food_stuff_tp)
+
+print(food_stuff_lt)
 
 #9. Slice out the middle item or items from the food_stuff_tp tuple or food_stuff_lt list.
+middle_items_only = food_stuff_lt[4:6]
+
+print(middle_items_only)
 
 #10. Slice out the first three items and the last three items from food_stuff_lt list
+first_three_gone = food_stuff_lt[0:3]
+last_three_gone = food_stuff_lt[-3:]
+print(first_three_gone)
+print(last_three_gone)
 
 #11. Delete the food_stuff_tp tuple completely
+del food_stuff_tp
+
+#print(food_stuff_tp) #should return error, it does
 
 #12. Check if an item exists in tuple:
 nordic_countries = ('Denmark', 'Finland','Iceland', 'Norway', 'Sweden')
 #12a. Check if 'Estonia' is a nordic country
+print('Estonia' in nordic_countries)
 
 #12b. Check if 'Iceland' is a nordic country
-
+print('Iceland' in nordic_countries)
