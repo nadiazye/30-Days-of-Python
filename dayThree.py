@@ -136,7 +136,7 @@ print(len('python') > len('dragon'))   # False
 print('True == True: ', True == True)
 print('True == False: ', True == False)
 print('False == False:', False == False)
-# In addition to the abpve comparison operator Python also uses:
+# In addition to the above comparison operator Python also uses:
 '''
 is: Returns true if both variables are the same object(x is y)
 is not: Returns true if both variables are not the same object (x is not y)

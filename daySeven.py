@@ -132,4 +132,153 @@ python.intersection(dragon)     # {'o', 'n'}
 #A set can be a subset or superset of other sets:
 #Subset: issubset()
 #Super set: issuperset
+"""# syntax
+st1 = {'item1', 'item2', 'item3', 'item4'}
+st2 = {'item2', 'item3'}
+st2.issubset(st1) # True
+st1.issuperset(st2) # True"""
 
+whole_numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+even_numbers = {0, 2, 4, 6, 8, 10}
+whole_numbers.issubset(even_numbers) # False, because it is a super set
+whole_numbers.issuperset(even_numbers) # True
+
+python = {'p', 'y', 't', 'h', 'o','n'}
+dragon = {'d', 'r', 'a', 'g', 'o','n'}
+python.issubset(dragon)     # False
+
+#Checking the Difference Between Two Sets
+#it returns the difference between two sets or using - symbol
+"""# syntax
+st1 = {'item1', 'item2', 'item3', 'item4'}
+st2 = {'item2', 'item3'}
+st2.difference(st1) # set() : st2 - st1
+st1.difference(st2) # {'item1', 'item4'} => st1\st2  : st2 - st1"""
+
+whole_numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+even_numbers = {0, 2, 4, 6, 8, 10}
+whole_numbers.difference(even_numbers) # {1, 3, 5, 7, 9}
+
+python = {'p', 'y', 't', 'o','n'}
+dragon = {'d', 'r', 'a', 'g', 'o','n'}
+python.difference(dragon)     # {'p', 'y', 't'}  - the result is unordered (characteristic of sets)
+# python - dragon
+dragon.difference(python)     # {'d', 'r', 'a', 'g'}
+# dragon - python
+
+#Finding Symmetric Difference Between Two Sets
+#It returns the symmetric difference between two sets. It means that it returns a set that contains all items from both
+#sets, except items that are present in both sets, mathematically: (A\B) U (B\A)
+"""# syntax
+st1 = {'item1', 'item2', 'item3', 'item4'}
+st2 = {'item2', 'item3'}
+# it means (A\B)∪(B\A)
+st2.symmetric_difference(st1) # {'item1', 'item4'} : st2 ^ st1"""
+
+whole_numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+some_numbers = {1, 2, 3, 4, 5}
+whole_numbers.symmetric_difference(some_numbers) # {0, 6, 7, 8, 9, 10}
+
+python = {'p', 'y', 't', 'h', 'o','n'}
+dragon = {'d', 'r', 'a', 'g', 'o','n'}
+python.symmetric_difference(dragon)  # {'r', 't', 'p', 'y', 'g', 'a', 'd', 'h'}
+# python ^ dragon
+
+#Joining Sets
+#If two sets do not have a common item or items we call them disjoint sets. We can check if two sets are joint or
+#disjoint using isdisjoint() method
+"""# syntax
+st1 = {'item1', 'item2', 'item3', 'item4'}
+st2 = {'item2', 'item3'}
+st2.isdisjoint(st1) # False"""
+
+even_numbers = {0, 2, 4 ,6, 8}
+odd_numbers = {1, 3, 5, 7, 9}
+even_numbers.isdisjoint(odd_numbers) # True, because no common item
+
+python = {'p', 'y', 't', 'h', 'o','n'}
+dragon = {'d', 'r', 'a', 'g', 'o','n'}
+python.isdisjoint(dragon)  # False, there are common items {'o', 'n'}
+
+#=======================================================================================================================
+#Exercises:
+#Level 1
+# sets
+it_companies = {'Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'}
+
+#1. Find the length of the set it_companies
+print(len(it_companies))
+
+#2. Add 'Twitter' to it_companies
+it_companies.add('Twitter')
+print(it_companies)
+
+#3. Insert multiple IT companies at once to the set it_companies
+it_companies.update(['Nvidia', 'AMD', 'Nokia'])
+print(it_companies)
+
+#4. Remove one of the companies from the set it_companies
+it_companies.remove('Twitter')
+print(it_companies)
+
+#5. What is the difference between remove and discard
+    #Remove raises an error if you try to remove something that is not there, discard doesn't
+#it_companies.remove('Twitter')
+print(it_companies) #^ does return an error
+
+it_companies.discard('Twitter')
+print(it_companies)
+
+#-----------------------------------------------------------------------------------------------------------------------
+#Level 2:
+A = {19, 22, 24, 20, 25, 26}
+B = {19, 22, 20, 25, 26, 24, 28, 27}
+
+#6. Join A and B
+C = A.union(B)
+print(C)
+
+#7. Find A intersection B
+A.intersection(B)
+print(A.intersection(B))
+
+#8. Is A subset of B
+print(B.issubset(A))
+
+#9. Are A and B disjoint sets
+print(A.isdisjoint(B))
+
+#10. Join A with B and B with A
+AB_set = A.union(B)
+print(AB_set)
+
+BA_set = B.union(A)
+print(BA_set)
+
+#11. What is the symmetric difference between A and B
+print(B.symmetric_difference(A))
+
+#12. Delete the sets completely
+del A
+del B
+
+#-----------------------------------------------------------------------------------------------------------------------
+#Level 3:
+age = [22, 19, 24, 25, 26, 24, 25, 24]
+
+#13. Convert the ages to a set and compare the length of the list and the set, which one is bigger?
+age_set = set(age)
+
+print(len(age_set))
+print(len(age))
+print('Age list is bigger than the set.')
+
+#14. Explain the difference between the following data types: string, list, tuple and set
+print("A string is: any text that is written.")
+print("A list is: is a collection which is ordered and changeable, allows duplicate members.")
+print("A tuple is: a collection of different data types which is ordered and unchangeable (immutable).")
+print("A set is: a collection which is unordered, un-indexed and unmodifiable, but we can add new items to the set, "
+      "NO duplicates. ")
+
+#15. I am a teacher and I love to inspire and teach people. How many unique words have been used in the sentence?
+# Use the split methods and set to get the unique words.

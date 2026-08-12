@@ -40,7 +40,7 @@ print('Country: ', country)
 print('Age: ', age)
 print('Married: ', is_married)
 
-#You can get user input by using the input() built in function, example below
+#You can get user input by using the input() built-in function, example below
 first_name = input('What is your name: ')
 age = input('How old are you? ')
 

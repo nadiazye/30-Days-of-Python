@@ -6,7 +6,6 @@ Text is a string data type. Any data type written as text is a string. Any data 
 quotes are strings. There are different string methods and built-in functions to deal with string data types.
 To check the length of a string use the len() method
 '''
-from dayTwo import first_name
 
 letter = 'P' #A string could be a single character or multiple texts
 print(letter)
