@@ -85,8 +85,8 @@ langauge = 'Python'
 for letter in langauge:
     print(letter)
 
-for i in range(len(langauge)):
-    print(language[i])
+"""for i in range(len(langauge)):
+    print(language[i]) """
 #-----------------------------------------------------------------------------------------------------------------------
 #Using For loop on tuple
 """syntax:
@@ -224,16 +224,42 @@ else:
 #ex:
 for number in range(6):
     pass
-#-----------------------------------------------------------------------------------------------------------------------
+print("-----------------------------------------------------------------------------------------------------------------")
 #Exercises:
 #Level 1:
 
 #1. Iterate 0 to 10 using for loop, do the same using while loop.
+    #for loop
+count_up = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
+for number in count_up:
+    print(number)
+
+print("----------------")
+
+    #while loop
+count = 0
+while count < 11:
+    print(count)
+    count = count + 1
+print("----------------")
 #2. Iterate 10 to 0 using for loop, do the same using while loop.
+    #for loop
+count_down = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+
+for number in count_down:
+    print(number)
+
+print("----------------")
+    #while loop
+count = 10
+
+while count > -1:
+    print(count)
+    count = count - 1
+print("----------------")
 
 #3. Write a loop that makes seven calls to print(), so we get on the output the following triangle:
-
 #
 ##
 ###
@@ -241,6 +267,16 @@ for number in range(6):
 #####
 ######
 #######
+
+hashtag_text = "#"
+print(hashtag_text)
+
+while len(hashtag_text) < 7:
+
+    hashtag_text = hashtag_text + "#"
+    print(hashtag_text)
+
+print("----------------")
 
 #4. Use nested loops to create the following:
 
@@ -252,6 +288,20 @@ for number in range(6):
 # # # # # # # #
 # # # # # # # #
 # # # # # # # #
+
+for row in range(8):
+    hashtag = " "
+    for column in range(8):
+        hashtag += "# "
+    print(hashtag)
+
+print("---------------------")
+
+#trying again but for it to be all within one loop:
+for row in range(8):
+    print("# " * 8)
+
+print("---------------")
 
 #5. Print the following pattern:
 """0 x 0 = 0
@@ -266,7 +316,12 @@ for number in range(6):
    9 x 9 = 81
    10 x 10 = 100"""
 
+for number in range(11):
+    product = number ** 2
+    print (str(number) + " x " + str(number) + " = " + str(product))
+
 #6. Iterate through the list, ['Python', 'Numpy','Pandas','Django', 'Flask'] using a for loop and print out the items.
+
 
 #7. Use for loop to iterate from 0 to 100 and print only even numbers
 

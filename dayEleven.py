@@ -84,8 +84,8 @@ def square_number(x):
 print(square_number(2))
 
 def area_of_circle (r):
-    PI = 3.14
-    area = PI * r ** 2
+    pie = 3.14
+    area = pie * r ** 2
     return area
 print(area_of_circle(10))
 
@@ -203,3 +203,189 @@ def greetings (name = 'Peter'):
     return message
 print(greetings())
 print(greetings('Nadia'))
+
+def generate_full_name(first_name = 'Nadia', last_name = 'Rodriguez'):
+    space = ' '
+    full_name = first_name + space + last_name
+    return full_name
+
+print(generate_full_name())
+print(generate_full_name('Nadia', 'Rodriguez'))
+
+def calculate_age (birth_year, current_year = 2026):
+    age = current_year - birth_year
+    return age
+print('Age: ', calculate_age(1800))
+
+def weight_of_object(mass, gravity = 9.81):
+    weight = str(mass * gravity) + ' N'
+    return weight
+print('Weight of an object in Newtons: ', weight_of_object(100))
+print(weight_of_object(100, 1.62))
+
+#Arbitrary Number of Arguments
+#If we do not know the number of arguments we pass to our function, we can create a function which can take arbitrary
+#number of arguments by adding * before the parameter name
+"""syntax:
+#Declaring a function:
+def: function_name(*args)"
+    code
+    code
+#Calling a function:    
+function_name(param1, param2, param3, ...)"""
+
+def sum_all_nums(*nums):
+    total = 0
+    for num in nums:
+        total += num #this is the same as total = total + num
+    return total
+print(sum_all_nums(2, 3, 5))
+
+#Default and Arbitrary Number of Parameters in Functions:
+def generate_groups (team, *args):
+    print (team)
+    for i in args:
+        print(i)
+generate_groups('Team 1', 'Nadia', 'Liz', 'Asabeneh')
+
+#Dictionary unpacking:
+#You can call a function which has named arguments using a dictionary with matching key names. You do so using **
+#Define a function that takes two arguments: 'name' and 'location'
+def greet(name,location):
+    #Print a greeting message using the provided arguments
+    print("Hi there", name, "how is the weather in", location)
+
+#Call the function using keyword arguments
+greet(name = "Alice", location = "New York")
+
+#Call the function using dictionary unpacking
+greet(**my_dict)
+#The ** operator unpacks the dictionary, passing its key-value pairs as keyword arguments to the function
+#Output: Hi there Alice how is the weather in New York
+
+#Arbitrary Number of Named Arguments
+#You can also define a function to accept an arbitrary number of named arguments
+def arbitrary_named_args(*args):
+    print("I received an arbitrary number of arguments, totaling, ", len(args))
+    print("They are provided as a dictionary in my function: ", type(args))
+    print("Let's print them: ")
+    for k, v in args.items():
+        print(" # key:", k, "value:", v)
+#Generally a good rule of thumb to avoid doing this unless it is required as it makes it harder to understand what this
+# function accepts and does
+
+#Function as a Parameter of Another Function
+#You can pass functions around as parameters
+def square_number(n):
+    return n ** n
+def do_something(f, x):
+    return f(x)
+print(do_something(square_number, 3))
+#-----------------------------------------------------------------------------------------------------------------------
+#Exercises:
+#Level 1:
+
+#1. Declare a function add_two_numbers. It takes two parameters and it returns a sum.
+
+#2. Area of a circle is calculated as follows: area = π x r x r. Write a function that calculates area_of_circle.
+
+#3. Write a function called add_all_nums which takes arbitrary number of arguments and sums all the arguments.
+# Check if all the list items are number types. If not, do give a reasonable feedback.
+
+#4. Temperature in °C can be converted to °F using this formula: °F = (°C x 9/5) + 32.
+# Write a function which converts °C to °F, convert_celsius_to-fahrenheit.
+
+#5. Write a function called check-season, it takes a month parameter and returns the season:
+# Autumn, Winter, Spring or Summer.
+
+#6. Write a function called calculate_slope which return the slope of a linear equation
+
+#7. Quadratic equation is calculated as follows: ax² + bx + c = 0.
+# Write a function which calculates solution set of a quadratic equation, solve_quadratic_eqn.
+
+#8. Declare a function named print_list. It takes a list as a parameter, and it prints out each element of the list.
+
+#9. Declare a function named reverse_list.
+# It takes an array as a parameter, and it returns the reverse of the array (use loops).
+"""
+print(reverse_list([1, 2, 3, 4, 5]))
+# [5, 4, 3, 2, 1]
+print(reverse_list(["A", "B", "C"])) 
+# ["C", "B", "A"] """
+
+#10. Declare a function named capitalize_list_items. It takes list as a parameter and ir returns a capitalized
+# list of items
+
+#11. Declare a function named add_iem. It takes a list and an item parameters. It returns a list with the item
+# added at the end.
+"""
+food_stuff = ['Potato', 'Tomato', 'Mango', 'Milk'];
+print(add_item(food_stuff, 'Meat'))     # ['Potato', 'Tomato', 'Mango', 'Milk','Meat'];
+numbers = [2, 3, 7, 9];
+print(add_item(numbers, 5))      # [2, 3, 7, 9, 5] """
+
+#12. Declare a function named remove_item. It takes a list an items parameters. It returns a list with the item
+# removed from it
+"""
+food_stuff = ['Potato', 'Tomato', 'Mango', 'Milk']
+print(remove_item(food_stuff, 'Mango'))  # ['Potato', 'Tomato', 'Milk'];
+numbers = [2, 3, 7, 9]
+print(remove_item(numbers, 3))  # [2, 7, 9] """
+
+#13. Declare a function named sum_of_numbers. It takes a number parameter, and it adds all the numbers in that range
+"""
+print(sum_of_numbers(5))
+print(sum_of_numbers(10))
+print(sum_of_numbers(100))"""
+
+#14. Declare a function named sum_of_odds. It takes a number parameter, and it adds all the odd numbers in that range.
+
+#15. Declare a function named sum_of_even. It takes a number parameter and it adds all the even numbers in that - range.
+#-----------------------------------------------------------------------------------------------------------------------
+#Level 2:
+#16. Declare a function named evens_and_odds . It takes a positive integer as parameter and it counts number
+# of evens and odds in the number.
+"""
+    print(evens_and_odds(100))
+    # The number of odds are 50.
+    # The number of evens are 51.
+"""
+
+#17. Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
+
+#18. Call your function is_empty, it takes a parameter and it checks if it is empty or not
+
+#19. Write different functions which take lists. They should calculate_mean, calculate_median, calculate_mode,
+# calculate_range, calculate_variance, calculate_std (standard deviation).
+
+#20. Write a function called greet which takes a default argument, name. If no argument is supplied it
+# should print "Hello, Guest!", otherwise it should greet the person by name.
+"""    greet()
+    # "Hello, Guest!
+    greet("Alice")
+    # "Hello, Alice!" """
+
+#21. Create a function called show_args to take an arbitrary number of named arguments and print their names and values
+"""
+show_args(name="Alice", age=30, city="New York")
+# Received: name: Alice, age: 30, city: New York
+show_args(name="Bob", pet="Fluffy, the bunny")
+# Received: name: Bob, pet: Fluffy, the bunny"""
+
+#-----------------------------------------------------------------------------------------------------------------------
+#Level 3:
+#22. Write a function called is_prime, which checks if a number is prime.
+
+#23. Write a functions which checks if all items are unique in the list.
+
+#24. Write a function which checks if all the items of the list are of the same data type.
+
+#25. Write a function which check if provided variable is a valid python variable
+
+#26. Go to the data folder and access the countries-data.py file.
+    #26a. Create a function called the most_spoken_languages in the world. It should return 10 or 20 most spoken
+     # languages in the world in descending order
+    #26b. Create a function called the most_populated_countries. It should return 10 or 20 most populated countries
+        # in descending order.
+
+#-----------------------------------------------------------------------------------------------------------------------
