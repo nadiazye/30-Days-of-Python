@@ -320,27 +320,294 @@ for number in range(11):
     product = number ** 2
     print (str(number) + " x " + str(number) + " = " + str(product))
 
+print("---------------------")
 #6. Iterate through the list, ['Python', 'Numpy','Pandas','Django', 'Flask'] using a for loop and print out the items.
+program_language = ['Python', 'Numpy', 'Pandas', 'Django', 'Flask']
 
+for language in program_language:
+    print(language)
+
+print("---------------------")
 
 #7. Use for loop to iterate from 0 to 100 and print only even numbers
+for number in range(101):
+    if number % 2 == 0:
+        print(number)
+
+print("---------------------")
 
 #8. Use for loop to iterate from 0 to 100 and print only odd numbers
+for number in range(100):
+    if number % 2 != 0:
+        print(number)
+
+print("---------------------")
 
 #-----------------------------------------------------------------------------------------------------------------------
 #Level 2:
 #9. Use for loop to iterate from 0 to 100 and print the sum of all numbers.
         #The sum of all numbers is 5050.
 
+#answer for the prompt by using another simpler method
+
+beginning = 0
+end = 101
+
+total = sum(range(beginning, end))
+print(total)
+
+print("---------------------")
+#answer for the prompt by doing the method asked
+
+list_sum = 0
+
+for i in range(0, 101):
+    list_sum += i
+print(list_sum)
+
+print("---------------------")
+
 #10. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
         #The sum of all evens is 2550. And the sum of all odds is 2500.
+
+evens_total = 0
+odds_total = 0
+
+for number in range(101):
+    if number % 2 == 0:
+        evens_total += number
+    else:
+     odds_total += number
+print(evens_total)
+print(odds_total)
+
+print("---------------------")
+
 #-----------------------------------------------------------------------------------------------------------------------
 #Level 3:
-#11. Go to the data folder and use the countries.py file. Loop through the countries and extract all the countries containing the word land.
+#11. Go to the data folder and use the countries.py file. Loop through the countries and extract all the countries
+# containing the word land.
+countries = [
+    'Afghanistan',
+    'Albania',
+    'Algeria',
+    'Andorra',
+    'Angola',
+    'Antigua and Barbuda',
+    'Argentina',
+    'Armenia',
+    'Australia',
+    'Austria',
+    'Azerbaijan',
+    'Bahamas',
+    'Bahrain',
+    'Bangladesh',
+    'Barbados',
+    'Belarus',
+    'Belgium',
+    'Belize',
+    'Benin',
+    'Bhutan',
+    'Bolivia',
+    'Bosnia and Herzegovina',
+    'Botswana',
+    'Brazil',
+    'Brunei',
+    'Bulgaria',
+    'Burkina Faso',
+    'Burundi',
+    'Cabo Verde',
+    'Cambodia',
+    'Cameroon',
+    'Canada',
+    'Central African Republic',
+    'Chad',
+    'Chile',
+    'China',
+    'Colombia',
+    'Comoros',
+    'Congo, Democratic Republic of the',
+    'Congo, Republic of the',
+    'Costa Rica',
+    "Côte d'Ivoire",
+    'Croatia',
+    'Cuba',
+    'Cyprus',
+    'Czech Republic',
+    'Denmark',
+    'Djibouti',
+    'Dominica',
+    'Dominican Republic',
+    'East Timor (Timor-Leste)',
+    'Ecuador',
+    'Egypt',
+    'El Salvador',
+    'Equatorial Guinea',
+    'Eritrea',
+    'Estonia',
+    'Eswatini',
+    'Ethiopia',
+    'Fiji',
+    'Finland',
+    'France',
+    'Gabon',
+    'Gambia',
+    'Georgia',
+    'Germany',
+    'Ghana',
+    'Greece',
+    'Grenada',
+    'Guatemala',
+    'Guinea',
+    'Guinea-Bissau',
+    'Guyana',
+    'Haiti',
+    'Honduras',
+    'Hungary',
+    'Iceland',
+    'India',
+    'Indonesia',
+    'Iran',
+    'Iraq',
+    'Ireland',
+    'Italy',
+    'Jamaica',
+    'Japan',
+    'Jordan',
+    'Kazakhstan',
+    'Kenya',
+    'Kiribati',
+    'Korea, North',
+    'Korea, South',
+    'Kuwait',
+    'Kyrgyzstan',
+    'Laos',
+    'Latvia',
+    'Lebanon',
+    'Lesotho',
+    'Liberia',
+    'Libya',
+    'Liechtenstein',
+    'Lithuania',
+    'Luxembourg',
+    'Madagascar',
+    'Malawi',
+    'Malaysia',
+    'Maldives',
+    'Mali',
+    'Malta',
+    'Marshall Islands',
+    'Mauritania',
+    'Mauritius',
+    'Mexico',
+    'Micronesia',
+    'Moldova',
+    'Monaco',
+    'Mongolia',
+    'Montenegro',
+    'Morocco',
+    'Mozambique',
+    'Myanmar',
+    'Namibia',
+    'Nauru',
+    'Nepal',
+    'Netherlands',
+    'New Zealand',
+    'Nicaragua',
+    'Niger',
+    'Nigeria',
+    'North Macedonia',
+    'Norway',
+    'Oman',
+    'Pakistan',
+    'Palau',
+    'Palestine',
+    'Panama',
+    'Papua New Guinea',
+    'Paraguay',
+    'Peru',
+    'Philippines',
+    'Poland',
+    'Portugal',
+    'Qatar',
+    'Romania',
+    'Russia',
+    'Rwanda',
+    'Saint Kitts and Nevis',
+    'Saint Lucia',
+    'Saint Vincent and the Grenadines',
+    'Samoa',
+    'San Marino',
+    'Sao Tome and Principe',
+    'Saudi Arabia',
+    'Senegal',
+    'Serbia',
+    'Seychelles',
+    'Sierra Leone',
+    'Singapore',
+    'Slovakia',
+    'Slovenia',
+    'Solomon Islands',
+    'Somalia',
+    'South Africa',
+    'South Sudan',
+    'Spain',
+    'Sri Lanka',
+    'Sudan',
+    'Suriname',
+    'Sweden',
+    'Switzerland',
+    'Syria',
+    'Tajikistan',
+    'Tanzania',
+    'Thailand',
+    'Togo',
+    'Tonga',
+    'Trinidad and Tobago',
+    'Tunisia',
+    'Turkey',
+    'Turkmenistan',
+    'Tuvalu',
+    'Uganda',
+    'Ukraine',
+    'United Arab Emirates',
+    'United Kingdom',
+    'United States',
+    'Uruguay',
+    'Uzbekistan',
+    'Vanuatu',
+    'Vatican City',
+    'Venezuela',
+    'Vietnam',
+    'Yemen',
+    'Zambia',
+    'Zimbabwe'
+]
+
+land = 'land' in countries
+
+for item in countries:
+    print(land)
+
+print("---------------------")
 #12. This is a fruit list, ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop.
+
+fruits_list = ['banana', 'orange', 'mango', 'lemon']
+
+backwards_fruits = fruits_list[::-1]
+print(backwards_fruits)
+
+print("---------------------")
+
 #13. Go to the data folder and use the countries_data.py file.
     #13a. What are the total number of languages in the data
     #13b. Find the ten most spoken languages from the data
     #13c. Find the 10 most populated countries in the world
 
 
+check_1 = ['Nadia', 'Radio','Cat']
+check_of_1 = 'adi' in check_1
+print(check_of_1)
+
+test = 'adi' in 'Nadia'
+print(test)

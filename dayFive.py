@@ -8,8 +8,8 @@ These are four collection data types in Python:
     Set: a collection which is unordered, un-indexed and unmodifiable, but we can add new items to the set, NO duplicates
     Dictionary: a collection which is unordered, changeable, and indexed, NO duplicates
 
-A list is a collection of different data types which is ordered and modifiable (mutable). A list can be empty
-or it may have different data type items.
+A list is a collection of different data types which is ordered and modifiable (mutable). A list can be empty, or it
+may have different data type items.
 
 How to Create a List:
 In Python we can create lists in two ways:

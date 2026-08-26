@@ -1,6 +1,5 @@
 #Day 2 out of 30 Days of Python Challenge
 #=======================================================================================================================
-from operator import truediv
 
 #going over pythons built-in functions
 
